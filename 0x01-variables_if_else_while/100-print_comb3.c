@@ -15,11 +15,11 @@ int main(void)
 	{
 		for (o = 49; 0 <= 57; o++)
 		{
-			if (m > n)
+			if (o > p)
 				{
 					putchar(p);
 					putchar(o);
-					if (p != 56 || m != 57)
+					if (p != 56 || o != 57)
 					{
 						putchar(',');
 						putchar(' ');
