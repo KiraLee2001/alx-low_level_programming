@@ -7,18 +7,18 @@
 
 int main(void)
 {
-	int i;
-	int j;
+	int a;
+	int b;
 
-	for (i = 48; i < 58; i++)
+	for (a = 48; a < 58; a++)
 	{
-		for (j = 48; j < 58; j++)
+		for (b = 48; b < 58; b++)
 		{
-			if (i != j && i < j)
+			if (a != b && a < b)
 			{
-				putchar(i);
-				putchar(j);
-				if (j == 57 && i == 56)
+				putchar(a);
+				putchar(b);
+				if (a == 57 && b == 56)
 				{
 					break
 						;
