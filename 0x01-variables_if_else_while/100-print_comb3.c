@@ -1,33 +1,34 @@
-#include <stdio.h>
 
+#include <stdio.h>
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: Always 0 (success/correct)
+ * Return: Always 0 (Success/correct)
  */
 
 int main(void)
 {
-	int p;
-	int o;
+	int m;
+	int n;
 
-	for (p = 48; p <= 56; p++)
+	for (m = 48; m < 58; m++)
 	{
-		for (o = 49; 0 <= 57; o++)
+		for (n = 48; n < 58; n++)
 		{
-			if (o > p)
+			if (m != n && m < n)
+			{
+				putchar(m);
+				putchar(n);
+				if (n == 57 && m == 56)
 				{
-					putchar(p);
-					putchar(o);
-					if (p != 56 || o != 57)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					break
+						;
 				}
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
-
