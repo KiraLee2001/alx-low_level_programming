@@ -2,18 +2,18 @@
 
 /**
  * print_alphabet - entry point
- *
- * Return: 0
  */
 
 void print_alphabet(void)
 {
-	char c = 'a';
+	char k;
 
-	while (c <= 'z');
+	char k = 'a';
+
+	while (k <= 'z');
 	{
-		_putchar(c);
-		c++;
+		_putchar(k);
+		k++;
 
 	}
 	_putchar('\n');
