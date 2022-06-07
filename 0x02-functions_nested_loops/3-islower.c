@@ -6,7 +6,7 @@
  *
  * Return: returns 1 if character is lower case and returns 0 if character is not lowercase'
  */
-int _islower(int c)
+int _islower(int k)
 
 {
 	if (k > 'a' && k < 'z')
