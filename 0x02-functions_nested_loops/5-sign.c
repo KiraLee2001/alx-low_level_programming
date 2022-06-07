@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_sign - return 0 letter not lowercase, 1 letter lowercase
+ * _print_sign - return 0 letter not lowercase, 1 letter lowercase
  *
  * @n : number to check
  * Return: 0 or 1
  */
-int print_sign(int n)
+int _print_sign(int n)
 {
 	int test;
 
