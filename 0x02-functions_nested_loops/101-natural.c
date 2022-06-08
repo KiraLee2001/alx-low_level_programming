@@ -11,7 +11,7 @@ int main(void)
 	int multi = 0;
 	int res = 0;
 
-while (multi < 1024)
+	while (multi < 1024)
 	{
 		if (multi % 3 == 0 || multi % 5 == 0)
 		{
