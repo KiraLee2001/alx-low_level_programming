@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long int a = 3, a = 612852475143;
+	unsigned long int a = 3, n = 612852475143;
 
 	for (; a < 12057; a += 2)
 	{
