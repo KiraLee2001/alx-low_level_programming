@@ -1,7 +1,6 @@
-#ifndef SUM_H
-#define SUM_H
+#ifndef _SUM_X_
+#define _SUM_X_
 
-#define SUM(x,y) ((x) + (y))
-typedef int make_iso_compilers_happy;
+#define SUM(x, y) ((x) + (y))
 
 #endif
