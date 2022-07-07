@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-
+#include <stdio.h>
 /**
  * print_all - Prints all inputs to the screen
  * @format: This is a string containing the format
