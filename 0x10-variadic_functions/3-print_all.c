@@ -1,86 +1,49 @@
 #include "variadic_functions.h"
-#include<stdio.h>
-#include<stdarg.h>
-/**
- * p_char - prints char
- * @list: arg
- * Return: void
- */
 
-void p_char(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
 /**
- * p_string - prints string
- * @list: arg
- * Return: void
- */
-void p_string(va_list list);
-{
-	char *str;
-
-	str = va_arg(list, char*);
-	if (str == NULL)
-		str = "(nil)";
-printf("%s", str);
-}
-/**
- * p_integer - print integer
- * @list: arg
- * Return: void
- */
-
-void p_integer(va_list list)
-{
-	printf("%i", va_arg(list, int));
-}
-/**
- * p_float- print float
- * @list: arg
- * Return: void
- */
-
-void p_float(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-/**
- * print_all - prints anything
- * @format: arg
- * Return: void
+ * print_all - prints all
+ * @format: param
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
-	t_print t[] = {
-		{"c", p_char};
-		{"s", p_string};
-		{"i", p_integer};
-		{"f", p_float};
-		{NULL, NULL};
-	};
 	va_list valist;
-	char *s = "";
+	unsigned int i = 0, j, k = 0;
+	char *str;
+	const char t_arg[] = "cifs";
 
 	va_start(valist, format);
-	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
-		while (t[j].x != NULL)
+		while (t_arg[j])
 		{
-			if (*(t[j].x) == format[i])
+			if (format[i] == t_arg[j] && k)
 			{
-				printf("%s", s);
-				t[j].T_func(valist);
-				s = ", ";
+				printf(", ");
+				break;
+			} j++;
+		}
+		switch (format[i])
+		{
+		case 'c':
+			printf("%c", va_arg(valist, int)), k = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(valist, int)), k = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(valist, double)), k = 1;
+			break;
+		case 's':
+			str = va_arg(valist, char *), k = 1;
+			if (!str)
+			{
+				printf("(nil)");
 				break;
 			}
-			j++;
-		}
-		i++;
+			printf("%s", str);
+			break;
+		} i++;
 	}
-	va_end(valist);
-	printf("\n");
+	printf("\n"), va_end(valist);
 }
