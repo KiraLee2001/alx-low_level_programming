@@ -43,19 +43,19 @@ size_t free_listint_safe(listint_t **h)
 		if (new == NULL)
 			exit(98);
 
-		new->p = (void *)*h;
-		new->next = hptr;
+		new -> p = (void *)*h;
+		new -> next = hptr;
 		hptr = new;
 
 		add = hptr;
 
-		while (add->next != NULL)
+		while (add -> next != NULL)
 		{
-			add = add->next;
-			if (*h == add->p)
+			add = add -> next;
+			if (*h == add -> p)
 			{
 				*h = NULL;
-				free_listp2(&hptr);
+				free_listit2(&hptr);
 				return (nnodes);
 			}
 		}
