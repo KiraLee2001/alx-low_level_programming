@@ -6,7 +6,7 @@
  *
  * Return: The number of nodes in the list
  */
-size_t print_listint_safe(const listint_t *head);
+size_t print_listint_safe(const listint_t *head)
 {
 	size_t numElem = 0;
 	const listint_t *headInit = NULL;
